@@ -13,6 +13,7 @@ $ docker-compose -f hydra-dev.yml exec hydra \
     -g client_credentials
 
 # Or using hydra binary if installed:
+$ docker-compose -f hydra-dev.yml exec hydra \
   hydra clients create --skip-tls-verify \
     --endpoint https://localhost:9001 \
     --id test3 \
