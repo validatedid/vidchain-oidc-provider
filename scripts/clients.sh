@@ -24,9 +24,11 @@ $ docker-compose -f hydra-dev.yml exec hydra \
     --callbacks https://127.0.0.1:9010/callback
 
 # List clients
+$ docker-compose -f hydra-dev.yml exec hydra \
 hydra clients list --skip-tls-verify  --endpoint https://127.0.0.1:9001
 
 # Simulate a client starting flow
+$ docker-compose -f hydra-dev.yml exec hydra \
 hydra token user 
   --skip-tls-verify \
   --endpoint https://localhost:9000 \
@@ -39,6 +41,7 @@ hydra token user
   --https
 
 # To manually migrate DB:
+$ docker-compose -f hydra-dev.yml exec hydra \
 hydra migrate sql --yes postgres://hydra:secret@localhost:5432/hydra?sslmode=disable
 
 
