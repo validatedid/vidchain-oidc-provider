@@ -5,7 +5,7 @@ var hydra = require('../services/hydra')
 
 // Sets up csrf protection
 var csrf = require('csurf');
-var csrfProtection = csrf({ cookie: true });
+var csrfProtection = csrf({ cookie: true, secure: true });
 
 router.get('/', csrfProtection, function (req, res, next) {
   // Parses the URL query
